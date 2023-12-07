@@ -2,6 +2,9 @@ body{
     background-color: rgb(0, 47, 255);
 }
 
+
+
+
 .cabeza{
     width: 300px;
     height: 300px;
@@ -18,7 +21,7 @@ body{
     margin: 0 auto;
     width: 500px;
     height: 500px;
-    border: thin solid black;
+    /*border: thin solid black;*/
 }
 
 #boca{
@@ -34,7 +37,38 @@ body{
     right: 0px;
     border-radius: 50%;
     background-color: rgb(0, 0, 0);
+    /*animacion*/
+    animation-name: grande;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes grande {
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.3);
+    }
+    40%{
+        transform: scale(1.6);
+    }
+    50%{
+        background-color: red;
+    }
+    60%{
+        transform: scale(1.3);
+    }
+    70%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(.5);
+    }
+    90%{
+        transform: scale(.2);
+    }
+} 
 
 #ojo2{
     width: 80px;
@@ -45,6 +79,37 @@ body{
     right: 100px;
     border-radius: 50%;
     background-color: rgb(0, 0, 0);
+    /*animacion*/
+    animation-name: grande2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes grande2 {
+    0%{
+        transform: scale(1);
+    }
+    20%{
+        transform: scale(1.3);
+    }
+    40%{
+        transform: scale(1.6);
+    }
+    50%{
+        background-color: red;
+    }
+    60%{
+        transform: scale(1.3);
+    }
+    70%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(.5);
+    }
+    90%{
+        transform: scale(.2);
+    }
 }
 
 .cuerpo{
@@ -80,7 +145,7 @@ position: relative;
     width: 10px;
     height: 450px;
     position:absolute;
-    margin:200px auto;
+    margin: auto;
     left: -100px;
     right: 10px;
     top:100px;
@@ -212,7 +277,11 @@ position: relative;
     top: 235px;;
     border-radius: 50px 0px 50px 50px;
     transform: rotate(-45deg);
+    
 }
+
+
+
 
 #pierna1{
     width: 40px;
@@ -224,6 +293,20 @@ position: relative;
     top: 310px;
     border-radius: 0px 0px 20px 20px;
     background-color: black;
+    animation-name: piernamover1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes piernamover1 {
+
+    0%{
+        transform: translateY(-90%);
+    } 
+    100%{
+        transform: translateY(0);
+    }   
 }
 
 #pierna2{
@@ -237,4 +320,19 @@ position: relative;
     border-radius: 00px 0px 20px 20px;
     transform: rotateY(180deg);  
     background-color: black;
+    /*animacion*/
+    animation-name: piernamover2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes piernamover2 {
+
+    0%{
+        transform: translateY(0);
+    } 
+    100%{
+        transform: translateY(-90%);
+    }   
 }
